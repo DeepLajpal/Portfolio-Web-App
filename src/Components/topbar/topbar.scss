@@ -97,6 +97,15 @@
 
 // responsive for tablet
 @media screen and (max-width: 780px) {
+  .topbar {
+    .wrapper {
+      .left {
+        .logo {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 // responsive for mobile
@@ -110,6 +119,10 @@
         row-gap: 5px;
         align-items: center;
         height: 57px;
+
+        .logo {
+          display: none;
+        }
         .itemContainer {
           margin-left: 0px;
         }

@@ -94,11 +94,17 @@
     .right {
         overflow: hidden;
         a {
-            left: 60%;
+            left: 70%;
         }
         .wrapper {
             padding-left: 23px;
             margin: 48px 0;
+            h1{
+              font-size: 50px;
+            }
+            h2{
+              font-size: 25px;
+            }
         }
     }
   }
