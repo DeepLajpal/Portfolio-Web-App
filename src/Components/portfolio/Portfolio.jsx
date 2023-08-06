@@ -3,12 +3,20 @@ import { useEffect, useState } from "react";
 import "./portfolio.scss";
 import {
   list,
-  contentPortfolio,
-  mobilePortfolio,
+  fullStackPortfolio,
+  htmlcssPortfolio,
   reactjsPortfolio,
   featuredPortfolio,
   emptyData,
 } from "../../data";
+
+const setEmptyData = (emptyData) => {
+  let tempData = [];
+  for (let i = 0; i < 6; i++) {
+    tempData.push({...emptyData[0], id : i})
+  }
+  return tempData;
+};
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
@@ -16,7 +24,7 @@ export default function Portfolio() {
 
   const isEmpty = (categoryData) => {
     if (categoryData.length === 0) {
-      setData(emptyData);
+      setData(setEmptyData(emptyData));
     } else {
       setData(categoryData);
     }
@@ -28,10 +36,10 @@ export default function Portfolio() {
         return isEmpty(featuredPortfolio);
       case "reactJS":
         return isEmpty(reactjsPortfolio);
-      case "mern":
-        return isEmpty(mobilePortfolio);
+      case "htmlcss":
+        return isEmpty(htmlcssPortfolio);
       case "full-Stack":
-        return isEmpty(contentPortfolio);
+        return isEmpty(fullStackPortfolio);
       default:
         return isEmpty(featuredPortfolio);
     }

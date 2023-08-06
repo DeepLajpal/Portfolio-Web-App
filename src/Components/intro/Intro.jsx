@@ -29,7 +29,7 @@ export default function Intro() {
             alt="down arrow for portfolio
           "
           ></img>
-        </a>
+        </a> 
       </div>
     </div>
   );

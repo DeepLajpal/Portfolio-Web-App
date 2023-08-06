@@ -7,7 +7,7 @@ export const featuredPortfolio = [
   },
   {
     id: 2,
-    title: "Ecommerce Web App",
+    title: "Live Ecommerce Web App",
     img: "assets/DholiSatiTraders.png",
     projectURL: "https://dholisatitraders.in/",
   },
@@ -37,40 +37,54 @@ export const featuredPortfolio = [
   },
 ];
 
-export const reactjsPortfolio = [];
+export const reactjsPortfolio = [
+  {
+    id: 1,
+    title: "Monkey Ecom",
+    img: "assets/monkey-ecom.webp",
+    projectURL: "https://monkey-ecom-deeplajpal.netlify.app/",
+  },
+  {
+    id: 5,
+    title: "Menu App",
+    img: "assets/menu.webp",
+    projectURL: "https://menuapp-deeplajpal.netlify.app/#",
+  },
+  {
+    id: 6,
+    title: "Reviews App",
+    img: "assets/reviews.webp",
+    projectURL: "https://reviews-deeplajpal.netlify.app/",
+  },
+];
 
-export const mobilePortfolio = [];
+export const htmlcssPortfolio = [
+  {
+    id: 3,
+    title: "Restaurant Website",
+    img: "assets/Restaurant.webp",
+    projectURL: "https://restaurantsweb.netlify.app",
+  },
+  {
+    id: 4,
+    title: "Travel Website",
+    img: "assets/travel.webp",
+    projectURL: "https://travelwebsitel.netlify.app/",
+  },
+];
 
-export const contentPortfolio = [];
+export const fullStackPortfolio = [
+  {
+    id: 2,
+    title: "Live Ecommerce Web App",
+    img: "assets/DholiSatiTraders.png",
+    projectURL: "https://dholisatitraders.in/",
+  },
+];
 
 export const emptyData = [
   {
     id: 1,
-    title: "Comming soon...",
-    img: "assets/emptyThumbnail.webp",
-  },
-  {
-    id: 2,
-    title: "Comming soon...",
-    img: "assets/emptyThumbnail.webp",
-  },
-  {
-    id: 3,
-    title: "Comming soon...",
-    img: "assets/emptyThumbnail.webp",
-  },
-  {
-    id: 4,
-    title: "Comming soon...",
-    img: "assets/emptyThumbnail.webp",
-  },
-  {
-    id: 5,
-    title: "Comming soon...",
-    img: "assets/emptyThumbnail.webp",
-  },
-  {
-    id: 6,
     title: "Comming soon...",
     img: "assets/emptyThumbnail.webp",
   },
@@ -86,8 +100,8 @@ export const list = [
     title: "ReactJS",
   },
   {
-    id: "mern",
-    title: "MERN",
+    id: "htmlcss",
+    title: "HTML5 | CSS",
   },
   {
     id: "full-Stack",

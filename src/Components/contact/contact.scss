@@ -1,13 +1,99 @@
-.contact{
-    background-color: white;
-    .container{
-        border: 2px solid black;
-        text-align: center;
-        height: 89.5vh;
+.contact {
+  background-color: white;
+  .container {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    box-sizing: border-box;
+    height: 89.5vh;
+    row-gap: 20px;
 
-        .formContainer{
-            border: 2px solid red;
-            width: 50vw;
+    .contactIcon {
+      font-size: 50px;
+      display: grid;
+      justify-content: center;
+    }
+
+    h3 {
+      font-size: 50px;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .formContainer {
+      //   border: 2px solid red;
+      width: 25vw;
+
+      .formElements {
+        display: grid;
+        row-gap: 18px;
+        padding: 0 20px;
+
+        .formRow {
+          display: grid;
+          row-gap: 8px;
+
+          .contactLabel {
+            font-size: 20px;
+          }
+          .contactInput{
+            height: 20px;
+            border: 1.5px solid black;
+          }
+          .contactMessage{
+            border: 1.5px solid black;
+          }
+
+          .impMark {
+            color: red;
+          }
+        }
+        .form-btn {
+          place-self: center;
+          margin-top: 20px;
+          button {
+            font-size: 20px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #15023a;
+            color: white;
+          }
         }
       }
+    }
+  }
+}
+// responsive for tablet
+@media screen and (max-width: 780px) {
+  .contact {
+    .container {
+      .formContainer {
+        width: 80vw;
+      }
+    }
+  }
+}
+
+// responsive for mobile
+@media screen and (max-width: 480px) {
+  .contact {
+    .container {
+      h3 {
+        font-size: 40px;
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .formContainer {
+        width: 80vw;
+        .formElements {
+          .formRow {
+            row-gap: 8px;
+          }
+        }
+      }
+    }
+  }
 }

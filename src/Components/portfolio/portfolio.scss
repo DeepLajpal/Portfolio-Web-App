@@ -1,76 +1,105 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
-.portfolio{
-    background-color: white;
+.portfolio {
+  background-color: white;
 
-    text-align: center;
+  text-align: center;
 
-    h1{
-        font-size: 50px;
-        margin: 20px 0;
-    }
+  h1 {
+    font-size: 50px;
+    margin: 20px 0;
+  }
 
-    ul{
-        display: grid;
-        grid-auto-flow: column;
-        column-gap: 50px;
-        padding: 0;
-        list-style: none;
-        justify-content: center;
+  ul {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 50px;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+  }
 
-    }
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    place-content: center;
+    justify-items: center;
+    gap: 30px 50px;
+    margin: 40px 0;
 
-    .container{
-        width: 100%;
-        display: grid;
-        grid-template-columns:repeat(3,250px);
-        place-content: center;
-        justify-items: center;
-        gap: 30px 50px ;
-        margin: 40px 0;
-        
-        
-        .item{
-            width: inherit;
-            height: 180px;
-            border-radius: 20px;
-            display: grid;
-            place-items: center;
-            place-content: center;
-            position: relative;
-            color: white;
-            cursor: pointer;
+    .item {
+      width: inherit;
+      height: 180px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      place-content: center;
+      position: relative;
+      color: white;
+      cursor: pointer;
 
+      h3 {
+        position: absolute;
+        font-size: 20px;
 
-
-            h3{
-                position: absolute;
-                font-size: 20px;
-
-                a{
-                    text-decoration: none;
-                    color: inherit;
-                }
-            }
-            img{
-                width: inherit;
-                height: inherit;
-                object-fit: center;
-                z-index: 1;
-                transition: all 0.5s ease;
-                
-            }
-
-            &:hover{
-                background-color: $main-Color;
-                img{
-                    opacity: 0.2;
-                    z-index: 0;
-                }
-
-            }
+        a {
+          text-decoration: none;
+          color: inherit;
         }
+      }
+      img {
+        width: inherit;
+        height: inherit;
+        object-fit: center;
+        z-index: 1;
+        transition: all 0.5s ease;
+      }
 
+      &:hover {
+        background-color: $main-Color;
+        img {
+          opacity: 0.2;
+          z-index: 0;
+        }
+      }
     }
-
+  }
 }
+
+// responsive for tablet
+
+@media screen and (max-width: 780px) {
+  .portfolio {
+    
+    .container {
+      grid-template-columns: repeat(3, 210px);
+
+      .item {
+        height: 175px;
+      }
+    }
+  }
+}
+
+// responsive for mobile
+
+@media screen and (max-width: 480px) {
+    .portfolio {
+        ul {
+          grid-auto-flow: row;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px 10px;
+          padding: 0 20px;
+        }
+    
+        .container {
+          grid-template-columns: repeat(2, 160px);
+          gap: 20px 20px;
+    
+          .item {
+            height: 140px;
+          }
+        }
+      }
+  }
