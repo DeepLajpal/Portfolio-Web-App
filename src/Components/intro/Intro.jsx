@@ -1,14 +1,19 @@
 import { useEffect, useRef } from "react";
 import "./intro.scss";
 
-export default function Intro() {
+export default function Intro({progress,setProgress}) {
   const profileimg = useRef();
+  
 
   useEffect(() => {
+    console.log("iam from intro");
     profileimg.current.style.left = "0%";
-  }, []);
+    setProgress(50);
+
+  },[setProgress, progress]);
 
   return (
+    
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
@@ -20,7 +25,7 @@ export default function Intro() {
           <h2>Hi There, I'm</h2>
           <h1>Deep Lajpal</h1>
           <h3>
-            <span>Full-Stack Developer</span>
+            <span>Front-End Developer</span>
           </h3>
         </div>
         <a href="#portfolio">
@@ -29,7 +34,7 @@ export default function Intro() {
             alt="down arrow for portfolio
           "
           ></img>
-        </a> 
+        </a>
       </div>
     </div>
   );

@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import "./contact.scss";
-import {FaHandshake} from "react-icons/fa"
+import {FaHandshake} from "react-icons/fa";
 
-export default function Contact() {
+
+export default function Contact({progress, setProgress}) {
+
+  useEffect(()=>{
+    console.log("i am from contact");
+    setProgress(100);
+  },[setProgress, progress]);
+
   return (
     <div className="contact" id="contact">
       <div className="container">
@@ -18,28 +26,28 @@ export default function Contact() {
               <label className="contactLabel" htmlFor="Name">
               Name<span className="impMark">*</span>
               </label>
-              <input className="contactInput" type="text" name="Name" />
+              <input className="contactInput" type="text" name="Name" required/>
             </div>
 
             <div className="formRow">
               <label className="contactLabel" htmlFor="Subject ">
                 Subject<span className="impMark">*</span>
               </label>
-              <input className="contactInput" type="text" name="Subject " />
+              <input className="contactInput" type="text" name="Subject " required/>
             </div>
 
             <div className="formRow">
               <label className="contactLabel" htmlFor="Work Mail">
                 Work Mail<span className="impMark">*</span>
               </label>
-              <input className="contactInput" type="email" name="Work Mail" />
+              <input className="contactInput" type="email" name="Work Mail" required/>
             </div>
 
             <div className="formRow">
               <label className="contactLabel" htmlFor="name">
                 Message<span className="impMark">*</span>
               </label>
-              <textarea className="contactMessage" rows="4" name="name" placeholder="Type Your Message here" />
+              <textarea className="contactMessage" rows="4" name="name" placeholder="Type Your Message here" required/>
             </div>
 
             <div className="form-btn">

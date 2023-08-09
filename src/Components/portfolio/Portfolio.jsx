@@ -18,7 +18,7 @@ const setEmptyData = (emptyData) => {
   return tempData;
 };
 
-export default function Portfolio() {
+export default function Portfolio({progress, setProgress}) {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
 
@@ -29,6 +29,11 @@ export default function Portfolio() {
       setData(categoryData);
     }
   };
+
+  useEffect(()=>{
+    console.log("iam from portfolio");
+    setProgress(75);
+  },[setProgress, progress]);
 
   useEffect(() => {
     switch (selected) {
