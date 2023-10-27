@@ -16,7 +16,7 @@ function App() {
   }, [setProgress]);
   return (
     <div className="App">
-      <LoadingBar color="#f11946" progress={progress} />
+      <LoadingBar color="#f11946" progress={progress} height={3.5}/>
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
